@@ -116,6 +116,15 @@
     padding: 10px 20px;
   }
 
+  /* Section 5_5 */
+  .section-5_5 {
+    margin: 60px auto;
+  }
+
+  .section-5_5 .section-title {
+    font-size: 1.5rem;
+  }
+
   /* => Section 5 */
   .section-5 {
     padding: 60px 0;

@@ -229,6 +229,7 @@ header .header__nav {
   box-shadow: 0 2px 2px -1px rgba(0, 0, 0, 0.4);
   height: 45px;
   letter-spacing: 1.2px;
+  text-transform: uppercase;
 }
 
 .packages thead :where(.features, .plat, .gold, .silver) {
@@ -240,7 +241,7 @@ header .header__nav {
 }
 
 .packages thead .plat {
-  background-color: #007f73;
+  background-color: #00adef;
 }
 
 .packages thead .gold {
@@ -271,7 +272,7 @@ thead .silver {
 }
 
 .packages thead .plat::before {
-  border-top-color: #007f73;
+  border-top-color: #00adef;
 }
 
 .packages thead .gold::before {
