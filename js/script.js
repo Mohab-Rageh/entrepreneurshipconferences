@@ -139,41 +139,49 @@ const daysElem = document.querySelectorAll(".time-div .days"),
   minutesElem = document.querySelectorAll(".time-div .minutes"),
   secondsElem = document.querySelectorAll(".time-div .seconds");
 
-let countDownDate = new Date("2024-04-30");
+let countDownDate = new Date("2024, 4, 30");
 let timerInterval;
 
-const startCountdown = () => {
-  const now = new Date().getTime();
-  const countDown = new Date(countDownDate).getTime();
-  const difference = (countDown - now) / 1000;
+// const startCountdown = () => {
+//   const now = new Date().getTime();
+//   const countDown = new Date(countDownDate).getTime();
+//   const difference = (countDown - now) / 1000;
+//   console.log(difference);
 
-  if (difference < 1) endCountDown();
+//   if (difference < 1) {
+//     endCountDown();
+//     daysElem.forEach((ele) => (ele.textContent = "00"));
+//     hoursElem.forEach((ele) => (ele.textContent = "00"));
+//     minutesElem.forEach((ele) => (ele.textContent = "00"));
+//     minutesElem.forEach((ele) => (ele.textContent = "00"));
+//     secondsElem.forEach((ele) => (ele.textContent = "00"));
+//   }
 
-  let days = Math.trunc(difference / (60 * 60 * 24));
-  let hours = Math.trunc((difference % (60 * 60 * 24)) / (60 * 60));
-  let minutes = Math.trunc((difference % (60 * 60)) / 60);
-  let seconds = Math.trunc(difference % 60);
+//   let days = Math.trunc(difference / (60 * 60 * 24));
+//   let hours = Math.trunc((difference % (60 * 60 * 24)) / (60 * 60));
+//   let minutes = Math.trunc((difference % (60 * 60)) / 60);
+//   let seconds = Math.trunc(difference % 60);
 
-  daysElem.forEach((ele) => (ele.innerHTML = days < 10 ? `0${days}` : days));
+//   daysElem.forEach((ele) => (ele.innerHTML = days < 10 ? `0${days}` : days));
 
-  hoursElem.forEach(
-    (ele) => (ele.innerHTML = hours < 10 ? `0${hours}` : hours)
-  );
+//   hoursElem.forEach(
+//     (ele) => (ele.innerHTML = hours < 10 ? `0${hours}` : hours)
+//   );
 
-  minutesElem.forEach(
-    (ele) => (ele.innerHTML = minutes < 10 ? `0${minutes}` : minutes)
-  );
+//   minutesElem.forEach(
+//     (ele) => (ele.innerHTML = minutes < 10 ? `0${minutes}` : minutes)
+//   );
 
-  secondsElem.forEach(
-    (ele) => (ele.innerHTML = seconds < 10 ? `0${seconds}` : seconds)
-  );
-};
+//   secondsElem.forEach(
+//     (ele) => (ele.innerHTML = seconds < 10 ? `0${seconds}` : seconds)
+//   );
+// };
 
-const endCountDown = () => clearInterval(timerInterval);
+// const endCountDown = () => clearInterval(timerInterval);
 
-startCountdown();
+// startCountdown();
 
-timerInterval = setInterval(startCountdown, 1000);
+// timerInterval = setInterval(startCountdown, 1000);
 
 const toggleDescriptionElement = document.querySelectorAll(".toggle-desc");
 
