@@ -785,9 +785,15 @@ footer {
   box-shadow: 0 0 10px #3333331e;
 }
 
+footer .content {
+  max-width: 1300px;
+  margin: 0 auto;
+}
+
 footer .info {
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
 }
 
 footer .footer-icon {
@@ -796,6 +802,15 @@ footer .footer-icon {
 
 footer .footer-icon:hover {
   transform: scale(1.1);
+}
+
+footer .softina {
+  margin-top: 25px;
+  text-align: center;
+}
+
+footer .softina span {
+  font-size: 2rem;
 }
 
 .info .element {
